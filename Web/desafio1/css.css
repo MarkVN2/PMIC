@@ -1,4 +1,13 @@
 body{
+    background-image: url(imagens/fundo2.png);
+    background-size: 159.9px;
+    background-color: white;
+    padding: 0;
+    margin: 0 auto;
+    width: 1200px;
+    border: 0px solid red;
+}
+body.home{
     background-image: url(imagens/fundo.png);
     background-size: 159.9px;
     background-color: #EFEFEF;
