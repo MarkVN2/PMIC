@@ -29,6 +29,10 @@ a{
     position: absolute; 
     padding-top: 20px;
 }
+#nav{
+    padding-left:900px; 
+    padding-top:50px;
+}
 .banner{
     width:1190px;
     position: relative;
