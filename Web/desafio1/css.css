@@ -1,20 +1,17 @@
 body{
     background-image: url(imagens/fundo2.png);
-    background-size: 159.9px;
+    background-size: 159.9px; /* FIX this band-aid */
     background-color: white;
     padding: 0;
     margin: 0 auto;
-    width: 1200px;
-    border: 0px solid red;
+    width: 1190px;
 }
 body.home{
     background-image: url(imagens/fundo.png);
-    background-size: 159.9px;
-    background-color: #EFEFEF;
+    background-size: 159.9px; /* FIX this band-aid */
+    background-color: white;
     padding: 0;
     margin: 0 auto;
-    width: 1200px;
-    border: 0px solid red;
 }
 a{
     text-align: center;
@@ -24,13 +21,12 @@ a{
     height: 130px;
 }
 #logo{
-    align-self: left;
-    padding-left: 20px; 
+    float:left;
     position: absolute; 
-    padding-top: 20px;
+    padding-top: 1.5%;
 }
 #nav{
-    padding-left:900px; 
+    float: right;
     padding-top:50px;
 }
 .banner{
@@ -39,10 +35,9 @@ a{
 }
 .textbox{
     background-color: white; 
-    width: 1200px; 
+    width: 1190px; 
     align-self: left; 
-    height: fit-content; 
-    position: absolute;
+    
 }
 .textbox > p{
     padding: 10px;  
