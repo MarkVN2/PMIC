@@ -4,8 +4,7 @@ body{
     background-color: white;
     padding: 0;
     margin: 0 auto;
-    width: 1200px;
-    border: 0px solid red;
+    width: 1190px;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -23,10 +22,13 @@ a{
     height: 130px;
 }
 #logo{
-    align-self: left;
-    padding-left: 20px; 
+    float:left;
     position: absolute; 
-    padding-top: 20px;
+    padding-top: 1.5%;
+}
+#nav{
+    float: right;
+    padding-top:50px;
 }
 .banner{
     width:1190px;
@@ -34,10 +36,9 @@ a{
 }
 .textbox{
     background-color: white; 
-    width: 1200px; 
+    width: 1190px; 
     align-self: left; 
-    height: fit-content; 
-    position: absolute;
+    
 }
 .textbox > p{
     padding: 10px;  
