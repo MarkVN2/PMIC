@@ -10,7 +10,9 @@ app.config["MYSQL_USER"] = "root"
 app.config["MYSQL_PASSWORD"] = "markos"
 app.config["MYSQL_DB"] = "unes"
 
+
 db = MySQL(app) 
+
 
 @app.route('/')
 def home():
@@ -25,16 +27,21 @@ def contato():
 
     if request.method == "POST" :
         try:
+
             email = request.form['email']
+
 
             assunto = request.form['subject']
 
-            descricao = request.form['description']  
+
+            descricao = request.form['description']
+
 
             if (email or assunto or descricao) == '':
-                 return render_template('contato.html', status = 'Erro')
+                 return render_template('contato.html', status = 'Erro algum dos campos está vazio')
 
-            cursor=  db.connection.cursor()
+            cursor =  db.connection.cursor()
+            
 
             cursor.execute(f"insert into  contatos (email, assunto, descricao) values ('{email}', '{assunto}', '{descricao}')")
             
