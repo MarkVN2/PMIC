@@ -5,9 +5,9 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 
 
-app.config["MYSQL_Host"] = "local"
+app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = "markos"
+app.config["MYSQL_PASSWORD"] = "PASSWORD_HERE"
 app.config["MYSQL_DB"] = "unes"
 
 db = MySQL(app) 
@@ -31,8 +31,8 @@ def contato():
 
             descricao = request.form['description']  
 
-            if (email or assunto or descricao) == '':
-                 return render_template('contato.html', status = 'Erro')
+            if email == '' or assunto  == '' or descricao == '':
+                 return render_template('contato.html', status = 'Erro algum dos campos está vazio')
 
             cursor=  db.connection.cursor()
 
@@ -47,3 +47,15 @@ def contato():
             return render_template('contato.html', status = 'Erro')
     else:
         return render_template('contato.html')
+
+
+@app.route('/users')
+def user():
+        cursor = db.connection.cursor()
+        users = cursor.execute("select * from contatos")
+        if users > 0:
+            userInfo = cursor.fetchall()
+            return render_template('users.html', userInfo = userInfo)
+        else:
+            return render_template('users.html')
+    

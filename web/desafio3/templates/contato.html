@@ -17,17 +17,17 @@
     <form  action = '/contato' method="post">
         <label for="email">Seu e-mail:</label>
             <br>
-            <input type="text" id="email" name="email">
+            <input type="email" maxlength="60" id="email" name="email">
         <br>
         <label for="subject">Assunto:</label>
             <br>
-            <input type="text" id="subject" name="subject">
+            <input type="text" maxlength="60" id="subject" name="subject">
         <br>
         <label for="description">Descrição:</label>
             <br>
-            <textarea id="description" name="description"  rows="4" cols="30"></textarea>
+            <textarea id="description" maxlength="255" name="description"  rows="4" cols="30"></textarea>
         <br>
         <input type="submit" value="Enviar" >
-        <p>{{ pedro }}</p>
+        <p>{{ status }}</p>
     </form>
 {% endblock %}    
