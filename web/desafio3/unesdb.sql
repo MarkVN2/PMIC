@@ -1,3 +1,5 @@
+#code to create a database
+
 create database unes;
 
 use unes;
