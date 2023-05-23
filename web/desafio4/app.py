@@ -1,5 +1,5 @@
 from flask import Flask , render_template, request
-from flask_mysqldb import MySQL
+from waitress import serve
 import mysql.connector
 
 
@@ -8,8 +8,8 @@ app = Flask(__name__)
 db = mysql.connector.connect(
 host = "localhost",
 user = "root",
-password = "markos",
-database = "unes"
+password = "password",
+database = "unes"   
 )
 
 @app.route('/')
@@ -62,3 +62,5 @@ def user():
         userInfo = cursor.fetchall()
         return render_template('users.html', userInfo = userInfo)
     
+if __name__ == "__main__":
+    serve(app,host="0.0.0.0",port=5000)
