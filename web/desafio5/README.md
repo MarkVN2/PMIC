@@ -1,6 +1,6 @@
-# Desafio 3 : Database implementation using MySQL
+# Desafio 5 : Responsivity
 
-In this "Desafio" you have to create a database for the 'contatos' page in the site and show it in a separate page.
+In this "Desafio" you have to add responsivity to the site, making it usable in cellphones and other devices of smaller dimensions.
 
 ## Quickstart
 
@@ -11,7 +11,7 @@ In this "Desafio" you have to create a database for the 'contatos' page in the s
 - Python
 - MySQL80
   - Python Connector
-
+  
 [//]: # (breaklist)
 
 ### Creating the database and running the site
