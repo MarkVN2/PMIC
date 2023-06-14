@@ -1,6 +1,6 @@
 # Desafio 3 : Database implementation using MySQL
 
-In this "Desafio" you have to create a database for the 'contatos' page in the site.
+In this "Desafio" you have to create a database for the 'contatos' page in the site and show it in a separate page.
 
 ## Quickstart
 

@@ -1,7 +1,6 @@
-# Desafio 4 : Putting the site up and using docker
+# Desafio 4 : Putting the site up 
 
-In this "Desafio" you have to use docker and make the site be accesible in the web
-(temporary text and quickstart)
+In this "Desafio" you have to make the site be accesible in the web utilizing AWS services.
 
 ## Quickstart
 
@@ -9,31 +8,11 @@ In this "Desafio" you have to use docker and make the site be accesible in the w
 
 >Requirements:
 
-- Python
-- MySQL80
-  - Python Connector
+- AWS Account
+- Bitvise SSH client
   
 [//]: # (breaklist)
 
-### Creating the database
-
-After installing MySQL and starting the MySQL console type:
-
-    create database unes;
-    use unes;
-
-    create table contatos(
-        email varchar(60) not null unique,
-        assunto varchar(60) not null,
-        descricao varchar(255)
-    );
-
-Then go in app.py and change PASSWORD_HERE to your local  mySQL password :
-
-    app.config["MYSQL_PASSWORD"] = "PASSWORD_HERE" 
-
-Within the repository directory put in the CMD console:
-
-    pip install -r requirements.txt
-
-    flask run
+> Refer to this gist to configure an AWS instance (Only avaible in Portuguese at the moment)
+> 
+ - [Configurando uma Instância na AWS](https://gist.github.com/MarkVN2/e97e6280250b696b3b027cffc4f6754a)
